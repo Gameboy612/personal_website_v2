@@ -12,38 +12,86 @@ interface Achievement {
   description: string;
   tags: string[];
   timeframe: string;
-  href: string;
+  href?: string;
   background_url: string[];
 }
 
 const achievements: Achievement[] = [
   {
+    title: "WellwiseSolutions",
+    role: "Full Stack Developer (CRM and AI Integration)",
+    description:
+      "- Built a CRM with **React Native** and **Flask** for more than 200 internal members.\n- Designed tree-based access permissions for multi-level marketing, storing over 2,000 appointments and client records in **AWS S3** and **MongoDB**.\n- Implemented scheduled WhatsApp outreach for more than 1,000 prospects and an **MCP server** for saving and recalling prospect data.",
+    tags: ["React Native", "Flask", "MongoDB", "AWS S3", "FastMCP"],
+    timeframe: "Feb 2026 - Present",
+    href: "https://wellwisesolutions.health",
+    background_url: [],
+  },
+  {
+    title: "CTFTime - 1st Place in Hong Kong",
+    role: "Competitive Security Researcher",
+    description:
+      "Contributed to major rated events including **UTCTF** and **HKCERT**.",
+    tags: ["CTF", "Cyber Security"],
+    timeframe: "Mar 2026",
+    background_url: [],
+  },
+  {
+    title: "NuttyShell CTF 2026 - Champion",
+    role: "Team Competitor",
+    description:
+      "- Achieved **1st place out of 179 teams** with 56 of 61 challenges solved.\n- Specialized in **OSINT**, miscellaneous, artificial intelligence, and web exploitation.",
+    tags: ["CTF", "OSINT", "AI", "Web Exploitation"],
+    timeframe: "Mar 2026",
+    background_url: [],
+  },
+  {
     title: "KongPaper",
-    role: "Full Stack Developer (Part-time)",
-    description: "- Reduced LLM pipeline from **15 to 3 minutes** (80% reduction) for English Reading generation through async operations.\n- Deployed **CosyVoice** and **Gemma** pipelines to synthesize listening exercises.\n- **Statistical Analysis** for user signups, service usage and user retention for Admin Panel.",
-    tags: ["FastAPI", "Next.js", "TailwindCSS", "MongoDB", "MilvusDB", "RedisDB"],
+    role: "3-Year Internship as Full-Stack Developer",
+    description:
+      "- Developed a scheduled web-crawling pipeline using **Selenium** and **Milvus**, collecting 100 online news articles per week as vector embeddings.\n- Designed an LLM and RAG pipeline for DSE-style English reading papers, reaching **1,000 papers generated** by September 2025.\n- Deployed a listening-exercise pipeline that produces five minutes of audio and 10 coherent questions with **Ollama**, **CosyVoice**, and **Next.js**.",
+    tags: ["FastAPI", "Next.js", "Selenium", "Milvus", "Ollama", "CosyVoice"],
     timeframe: "July 2024 - Present",
-    href: "/projects/kongpaper",
-    background_url: ["./assets/images/kongpaper_cover.png"]
+    href: "https://kongpaper.com",
+    background_url: ["./assets/images/kongpaper_cover.png"],
   },
   {
     title: "CUHK CTF 2025 - 1st Runner Up",
     role: "C072 - hello world has been taken",
-    description: "48-hour Jeopardy styled hacking competition by CUHK.\n- 2nd place in CUHK Division.\n- 4th/158 place overall.",
+    description:
+      "48-hour Jeopardy-style hacking competition by CUHK.\n- Awarded **1st Runner-up** in the CUHK Division and **4th place overall** out of 158 teams.\n- Specialized in web, binary, reverse, and cloud engineering.",
     tags: ["CTF", "Cyber Security", "Web", "Cloud Security", "Binary", "Reverse"],
-    timeframe: "Oct 2025",
-    href: "/projects/fastapi-fullstack",
-    background_url: ["./assets/images/cuhkctf2025.png", "./assets/images/cuhkctf2025.png"]
+    timeframe: "Sep 2025",
+    background_url: ["./assets/images/cuhkctf2025.png"],
   },
   {
-    title: "Devas - Colloseum",
-    role: "Minecraft Mod Developer",
-    description: "Developed a Minecraft RPG PVP-based mod using *datapacks* for a custom PVP gamemode.\n- Flexible EChest-based GUI system, featuring an Excel-based Editor by Python.\n- Complete Gameplay Loop featuring CTF mechanics with global-time-based events.\n- Implementation of Custom RPG Stats including rewriting the base Health, Speed, Defense, Damage, Stamina, Mana, etc.",
-    tags: ["mcfunction", "Python"],
-    timeframe: "Jun 2019 - Dec 2024",
-    href: "/projects/devas",
-    background_url: ["https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w=" ]
-  }
+    title: "VoiceLight",
+    role: "Solo Commission-Based Backend Developer",
+    description:
+      "- Built a **FastAPI** server with JWT and OAuth2 for more than 100 profiles, audio files, and images using **MongoDB** and **AWS S3**.\n- Deployed an audio-transformation neural network for constriction, breathiness, and nasalization using **Librosa** and **PyTorch**.",
+    tags: ["FastAPI", "OAuth2", "MongoDB", "AWS S3", "Librosa", "PyTorch"],
+    timeframe: "Jun 2025 - Aug 2025",
+    background_url: [],
+  },
+  {
+    title: "KALA Solutions",
+    role: "Full Stack Developer",
+    description:
+      "- Built landing pages and backend systems for small and medium enterprises, including Jokangel Crystals, Amazing Echo Solutions, and VoiceLight.\n- Led systems development for **Devas**, a Minecraft RPG datapack, in collaboration with 3D artists and game designers.\n- Led development and marketing for **FeastAR** and **AutoBB**.",
+    tags: ["Full Stack", "Web Development", "Minecraft Datapacks", "AR"],
+    timeframe: "Jun 2023 - Present",
+    href: "https://kalalib.com",
+    background_url: [],
+  },
+  {
+    title: "CUHK Student Helper Scheme",
+    role: "Machine Learning Research Assistant",
+    description:
+      "- Labelled over 90 minutes of WAV data for classifying wall defects from knocking sounds.\n- Used **Librosa** and **TensorFlow** to preprocess and analyse mel-spectrograms with **89% accuracy**.",
+    tags: ["Python", "Librosa", "TensorFlow", "Audio Classification"],
+    timeframe: "Jan 2024 - Apr 2024",
+    background_url: [],
+  },
 ]
 
 function AchievementCard({
@@ -58,7 +106,7 @@ function AchievementCard({
   tags,
   background_url
 }: Achievement & { activeIndex: number, i: number, setRef: RefCallback<HTMLDivElement> }) {
-  return <div ref={setRef} className="w-full flex justify-left pb-30">
+  return <div ref={setRef} id="timeline" className="w-full flex justify-left pb-30">
     <a className="px-4 sm:px-[20%] md:px-[30%] relative w-full rounded-lg" href={href}>
       <div className="text-left">
         <div>

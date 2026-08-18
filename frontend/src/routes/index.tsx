@@ -2,8 +2,7 @@ import { createFileRoute } from "@tanstack/react-router"
 import Cover from "@/components/HomePage/Cover"
 import Timeline from "@/components/HomePage/Timeline"
 import WhoAmI from "@/components/HomePage/WhoAmI"
-import BarCrossAnimated from "@/components/Common/BarCrossAnimated"
-import { useState } from "react"
+import NavBar from "@/components/Common/NavBar"
 // import useAuth from "@/hooks/useAuth"
 
 export const Route = createFileRoute("/")({
@@ -20,11 +19,9 @@ const tags = [
 
 function HomePage() {
 
-  const [opened, setOpened] =  useState(false);
-
   return (
     <>
-      <BarCrossAnimated className="w-10" barClassName={"bg-gray-500"} opened={opened} setOpened={setOpened} />
+      <NavBar />
       <div className="w-full min-h-screen flex flex-col items-center justify-between">
         <Cover tags={tags}/>
         <WhoAmI />
