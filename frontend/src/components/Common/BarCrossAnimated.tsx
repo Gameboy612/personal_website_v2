@@ -19,14 +19,14 @@ export default function BarCrossAnimated({
       type="button"
     >
       <span
-        className={`bar-cross-animated-rectangle ${opened ? "rotate-45 top-[50%]" : "top-[20%]"}`}
+        className={`bar-cross-animated-rectangle flex flex-row-reverse ${opened ? "rotate-45 top-[50%]" : "top-[20%]"}`}
       >
         <span
           className={`${barClassName} block h-full transition-all duration-[300ms] ease-in-out ${opened ? "w-1/2" : "w-full"}`}
         />
       </span>
       <span
-        className={`bar-cross-animated-rectangle ${barClassName} top-[50%] ${opened ? "rotate-[-45deg]" : ""}`}
+        className={`bar-cross-animated-rectangle flex flex-row-reverse ${barClassName} top-[50%] ${opened ? "rotate-[-45deg]" : ""}`}
       />
       <span
         className={`bar-cross-animated-rectangle flex flex-row-reverse ${opened ? "rotate-45 top-[50%]" : "top-[80%]"}`}
