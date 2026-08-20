@@ -1,4 +1,4 @@
-import ImageGallery from "../Common/Decoration/ImageGallery";
+// import ImageGallery from "../Common/Decoration/ImageGallery";
 import TypingAnimation from "../Common/Decoration/TypingAnimation";
 
 export default function WhoAmI() {
