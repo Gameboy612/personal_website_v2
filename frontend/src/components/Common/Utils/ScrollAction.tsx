@@ -20,15 +20,25 @@ export default function ScrollAction({
             handleScrollEvent && handleScrollEvent(e, elem);
         };
 
+        const handleTouchBoundary = (e: TouchEvent) => {
+            handleScrollEvent && handleScrollEvent(e, elem);
+        };
+
 
         elem.addEventListener('wheel', handleScroll, { passive: false });
         elem.addEventListener('touchmove', handleScroll, { passive: false });
+        elem.addEventListener('touchstart', handleTouchBoundary, { passive: true });
+        elem.addEventListener('touchend', handleTouchBoundary, { passive: true });
+        elem.addEventListener('touchcancel', handleTouchBoundary, { passive: true });
 
         return () => {
             elem.removeEventListener('wheel', handleScroll);
             elem.removeEventListener('touchmove', handleScroll);
+            elem.removeEventListener('touchstart', handleTouchBoundary);
+            elem.removeEventListener('touchend', handleTouchBoundary);
+            elem.removeEventListener('touchcancel', handleTouchBoundary);
         }
-    }, [])
+    }, [handleScrollEvent, preventDefault])
 
     return (
     <div ref={sectionRef} className="w-full h-full">
