@@ -44,42 +44,70 @@ export default function OSUAlbum({
     {
       title: "CUHK CTF 2026 - Author",
       description: "Wrote CTF Challenges for CUHK CTF 2026",
-      date: "2026-12 (Upcoming)"
+      date: "2026-12 (Upcoming)",
+      content: "I am now writing CTF challenges for CUHK CTF 2026!!! I will be writing challenges for Web, Rev, OSINT, and Misc for now. Stay tuned for more updates on this!",
+      href: "https://www.instagram.com/catasploit/",
+      hrefText: "CUHK CTF Team Instagram"
     },
     {
       title: "AI Engineer at 現代小學士",
       description: "Worked on AI Primary English Exams",
-      date: "2026-8"
+      date: "2026-8",
+      content: "I worked for a summer internship at Modern Bachelor Education, where I developed an AI system for parents to generate primary school English exams",
+      href: "https://easypaper.ai",
+      hrefText: "EasyPaper Website"
     },
     {
       title: "AI Chatbot & CRM",
       description: "For AMA21NG and 知傳健康",
-      date: "2026-8"
+      date: "2026-8",
+      content: "I'm currently working on a custom-built CRM System for WellWiseSolutions. The system also integrates an AI Chatbot with WhatsApp Business API to answer customer inquiries, making use of FastMCP, MongoDB, FastAPI and Flask. (Yes, there are two backend frameworks, one is for the CRM API and one is for the LLM Chatbot).",
+      href: "https://wellwisesolutions.health/",
+      hrefText: "WellWiseSolutions"
     },
     {
       title: "NuttyShell x PolyU CTF Champion",
       description: "Won with \"Team Meng Wei\"",
-      date: "2026-3"
+      date: "2026-3",
+      content: "Mainly done a lot of OSINT challenges here, since my teammate was better at binary than I am this time. (I usually do binary)",
+      href: "https://www.cse.cuhk.edu.hk/news/achievements/cybersecurity-competitions-2025-2026/"
     },
     {
       title: "AutoBB - Automatic Blackboard Downloader",
       description: "A chrome extension with active paid users",
-      date: "2026-1"
+      date: "2026-1",
+      content: "This was my first project trying to monetize B2C products. It was not designed to make a lot of money, but to learn how payment systems work. I made use of Stripe to set up the payment system, and used free tier cloudflare.",
+      href: "https://autobb.kalalib.com",
+      hrefText: "Product Website"
     },
     {
       title: "CUHK CTF 2025 1st Runner Up",
       description: "Won with \"hello world has been taken\"",
-      date: "2025-12"
+      date: "2025-12",
+      content: "This time I worked on binary and rev challenges, since I'm the only one who could do binary.",
+      images: [
+        "./assets/images/cuhkctf2025_groupphoto.png",
+        "./assets/images/cuhkctf2025.png"
+      ],
+      href: "https://www.cse.cuhk.edu.hk/news/achievements/cybersecurity-competitions-2025-2026/"
     },
     {
       title: "FeastAR - AR Food Ordering System",
       description: "A mobile AR food ordering system for restaurants",
-      date: "2025-5"
+      date: "2025-5",
+      href: "https://feastar.kalalib.com",
+      hrefText: "FeastAR Demo Website",
+      content: "FeastAR is a mobile AR food ordering system for restaurants. We are currently developing this for a local restaurant for pilot testing.",
     },
     {
       title: "Jokangel Crystals - E-commerce Website",
       description: "Built an e-commerce website for Jokangel Crystals",
-      date: "2025-2"
+      date: "2025-2",
+      content: "Helped a local merchant build an e-commerce and portfolio website for their crystal business. The website is built with Wix Studio.",
+      images: [
+        "./assets/images/jokangel_crystals.png"
+      ],
+      href: "https://lokapakki.wixstudio.com/jokangel-shop"
     },
     
   ];

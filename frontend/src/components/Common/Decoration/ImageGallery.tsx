@@ -16,7 +16,7 @@ export default function ImageGallery({ images }: { images: string[] }) {
   }
 
   return (
-    <div className="relative flex w-full aspect-[1.5] items-center justify-between">
+    <div className="relative flex h-full aspect-[2] md:aspect-[1.5] items-center justify-between">
       {images.length > 1 && (
         <button
           aria-label="Previous image"

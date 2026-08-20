@@ -4,6 +4,11 @@ export interface OSUCardData {
     title: string;
     description: string;
     date: string;
+    logoImage?: string;
+    images?: string[];
+    content?: string;
+    href?: string;
+    hrefText?: string;
 }   
 
 export interface OSUMathContextType {

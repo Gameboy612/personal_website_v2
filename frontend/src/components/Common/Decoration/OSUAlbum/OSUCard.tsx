@@ -35,16 +35,16 @@ export default function OSUCard({
 
   // To remove the flying over animation, we can set opacity to zero
   return (
-    <div className={`absolute h-[15%] aspect-[3] border border-gray-300 rounded-lg shadow-md -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 ease-out ${isSelected ? 'text-primary bg-amber-100' : 'bg-gray-200 '}`}
+    <div className={`absolute h-[14%] aspect-[2.7] md:h-[17%] md:aspect-[16/5] border border-gray-300 rounded-lg shadow-md -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 ease-out ${isSelected ? 'text-primary bg-amber-100' : 'bg-gray-200 '}`}
     style={{
         left: `${x}%`,
         top: `${y}%`,
         scale: `${finalScale}`,
         opacity: Math.abs(adjustedTheta - Math.PI) > (numSideRenderedCards - 1) * deltaTheta ? "0" : "1"
     }}>
-        <div className="flex flex-col justify-center h-full pl-6">
-          <h3 className={`text-xl font-bold ${isSelected ? 'text-primary' : 'text-gray-800'}`}>{card.title}</h3>
-          <p className="font-mono text-gray-600">{card.description}</p>
+        <div className="flex flex-col justify-center h-full pl-3 md:pl-6">
+          <h3 className={`text-lg md:text-xl font-bold ${isSelected ? 'text-primary' : 'text-gray-800'}`}>{card.title}</h3>
+          <p className="text-sm md:text-base font-mono text-gray-600">{card.description}</p>
           <p className={`font-mono ${isSelected ? 'text-secondary' : 'text-gray-500'}`}>{card.date}</p>
         </div>
       </div>
