@@ -15,6 +15,7 @@ export default function Projects() {
   const isIntersecting = useIntersection(sectionRef, "0px");
 
   const [diskPosition, setDiskPosition] = useState(0);
+    const touchYRef = React.useRef<number | null>(null);
 
   const [allowScrollUp, setAllowScrollUp] = useState(false);
   const [allowScrollDown, setAllowScrollDown] = useState(false);
@@ -54,8 +55,37 @@ export default function Projects() {
                 }
             }
         } else if (e instanceof TouchEvent) {
-            // Handle touch events if needed
-            console.log("Touch event");
+            if (e.type === "touchstart") {
+                touchYRef.current = e.touches[0]?.clientY ?? null;
+                return;
+            }
+
+            if (e.type === "touchend" || e.type === "touchcancel") {
+                touchYRef.current = null;
+                return;
+            }
+
+            const currentY = e.touches[0]?.clientY;
+            if (currentY === undefined || touchYRef.current === null) {
+                return;
+            }
+
+            const deltaY = touchYRef.current - currentY;
+            touchYRef.current = currentY;
+
+            if (deltaY === 0) {
+                return;
+            }
+
+            setDiskPosition((prevPosition) => prevPosition + deltaY);
+
+            const canScroll = deltaY > 0
+                ? window.ProjectsComponentData.allowScrollDown
+                : window.ProjectsComponentData.allowScrollUp;
+
+            if (!canScroll) {
+                e.preventDefault();
+            }
         }
         console.log(elem)
     }
