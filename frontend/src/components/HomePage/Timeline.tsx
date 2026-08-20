@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react"
 import type { RefCallback } from "react"
 import Markdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
-import ImageGallery from "../Common/ImageGallery"
-import Tag from "../Common/Tag"
+import ImageGallery from "../Common/Decoration/ImageGallery"
+import Tag from "../Common/Decoration/Tag"
 import { mdxComponents } from "../ui/mdxComponents"
 
 interface Achievement {

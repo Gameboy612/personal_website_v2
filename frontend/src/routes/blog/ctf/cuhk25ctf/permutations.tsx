@@ -1,4 +1,4 @@
-import Tag from "@/components/Common/Tag";
+import Tag from "@/components/Common/Decoration/Tag";
 import { mdxComponents } from "@/components/ui/mdxComponents";
 import FlagSubmissionBox from "@/components/Blog/CTF/FlagSubmissionBox";
 import { createFileRoute } from "@tanstack/react-router";

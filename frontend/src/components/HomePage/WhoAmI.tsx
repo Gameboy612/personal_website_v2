@@ -1,10 +1,21 @@
+import ImageGallery from "../Common/Decoration/ImageGallery";
+import TypingAnimation from "../Common/Decoration/TypingAnimation";
+
 export default function WhoAmI() {
   return (
-    <div className="w-full h-[100vh] flex flex-col items-center justify-center">
-        <div>Who am I?</div>
-        <div>I am Lo Pak Ki Kapakki, you may refer me as Kaki (嘉奇) or Kapakki.</div>
-        <div>I am a final year student studying <strong>B.Eng. in AI: System and Technology</strong> in The Chinese University of Hong Kong (CUHK).</div>
+    <div className="w-full h-[100vh] px-10 flex flex-col items-center justify-center">
+        <div className="text-2xl font-bold font-mono mb-4"><span className="text-primary">$</span> <TypingAnimation text="whoami" speedMs={40} /></div>
+        <div className="text-lg font-thin">Kapakki, <strong>B.Eng. in AI: System and Technology</strong> in The Chinese University of Hong Kong (CUHK).</div>
+        <div></div>
 
+        
+        <div className="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mt-6">
+          <ImageGallery images={[
+            "https://i.imgur.com/0g1k5nG.jpg",
+            "https://i.imgur.com/0g1k5nG.jpg",
+        ]} />
+        </div>
+        
 
     </div>
   )

@@ -3,3 +3,10 @@
 .bar-cross-animated-rectangle {
   @apply absolute z-10 h-[15%] w-full -translate-y-1/2 transition-all duration-500 ease-in-out;
 }
+@theme {
+  --color-primary: #EBA601;
+  --color-primary-text: #FFFFFF;
+  --color-primary-inactive: #999999;
+  --color-primary-inactive-text: #505050;
+  --color-secondary: #0077ff;
+}
