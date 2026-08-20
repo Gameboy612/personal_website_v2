@@ -23,9 +23,23 @@ export default function Projects() {
     useEffect(() => {
         window.ProjectsComponentData = { allowScrollUp, allowScrollDown, isIntersecting };
         
+
+        const scrollHandler = () => {
+            const boundaryElement = document.getElementById('scroll-boundary');
+            const scrollDistance = boundaryElement?.getBoundingClientRect().top;
+            
+            console.log(boundaryElement)
+            if (scrollDistance !== undefined) {
+                if (!window.ProjectsComponentData.allowScrollDown && scrollDistance - window.screen.availHeight < 0) {
+                    window.scrollTo({top: scrollDistance - window.screen.availHeight + window.scrollY, behavior: 'instant'});
+                }
+            }
+        }
+        window.addEventListener('scroll', scrollHandler);
         // Optional cleanup when component unmounts
         return () => {
-        delete window.ProjectsComponentData;
+            delete window.ProjectsComponentData;
+            window.removeEventListener('scroll', scrollHandler);
         };
     }, [allowScrollUp, allowScrollDown, isIntersecting]);
 
@@ -92,12 +106,12 @@ export default function Projects() {
 
   
   return (
-    <section className="w-full h-[100dvh] relative">
+    <section className="w-full h-[100dvh] relative mb-5">
         <ScrollAction handleScrollEvent={handleScrollEvent} preventDefault={false}>
             <OSUAlbum scrollPosition={diskPosition} setAllowScrollDown={setAllowScrollDown} setAllowScrollUp={setAllowScrollUp} />
         </ScrollAction>
 
-        <div ref={sectionRef} className="absolute bottom-0 left-0 w-full h-1 pointer-events-none" />
+        <div id="scroll-boundary" ref={sectionRef} className="absolute top-[100vh] left-0 w-full h-0 pointer-events-none" />
     </section>
   )
 }

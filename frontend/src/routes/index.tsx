@@ -35,11 +35,12 @@ function HomePage() {
         <WhoAmI />
         <WhoAreYou />
         {
-          ["Recruiter"].includes(user) && <Timeline />
+          ["Recruiter", "Business Owner"].includes(user) && <Projects />
         }
         {
-          ["Business Owner"].includes(user) && <Projects />
+          ["Recruiter"].includes(user) && <Timeline />
         }
+        
         {/* <p className="text-center text-sm text-gray-500 mb-4">© 2026 Kapakki Lo. All rights reserved.</p> */}
       </div>
     </UserContext.Provider>

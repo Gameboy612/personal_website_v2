@@ -24,7 +24,6 @@ export default function OSUAlbum({
   let scaleFactor = 0.8;
   
   let numRenderedCards = 9;
-  let numTotalCards = 20;
   let scrollSpeed = 0.0004;
 
   if (screen.width < 768) {
@@ -131,6 +130,7 @@ export default function OSUAlbum({
     
   ];
 
+  let numTotalCards = cardData.length;
   const numSideRenderedCards = Math.floor(numRenderedCards / 2);
   
   const currentWorldTheta = 2 * Math.PI + scrollPosition * scrollSpeed - deltaTheta * (numSideRenderedCards);
@@ -149,7 +149,7 @@ export default function OSUAlbum({
       setAllowScrollUp(selectedIndex < 0);
     }
     if (setAllowScrollDown) {
-      setAllowScrollDown(selectedIndex > numTotalCards);
+      setAllowScrollDown(selectedIndex >= numTotalCards);
     }
   }, [selectedIndex]);
 
