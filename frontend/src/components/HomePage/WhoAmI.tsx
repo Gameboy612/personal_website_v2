@@ -11,8 +11,8 @@ export default function WhoAmI() {
         
         <div className="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mt-6">
           <ImageGallery images={[
-            "https://i.imgur.com/0g1k5nG.jpg",
-            "https://i.imgur.com/0g1k5nG.jpg",
+            "",
+            "",
         ]} />
         </div>
         

@@ -70,7 +70,11 @@ export default function OSUAlbum({
       description: "Won with \"Team Meng Wei\"",
       date: "2026-3",
       content: "Mainly done a lot of OSINT challenges here, since my teammate was better at binary than I am this time. (I usually do binary)",
-      href: "https://www.cse.cuhk.edu.hk/news/achievements/cybersecurity-competitions-2025-2026/"
+      href: "https://www.cse.cuhk.edu.hk/news/achievements/cybersecurity-competitions-2025-2026/",
+      hrefText: "CUHK CSE Achievements - Undergraduate Students Excel in Cybersecurity Competitions (2025–2026)",
+      images: [
+        "./assets/images/nuttyshell2026_groupphoto.png",
+      ]
     },
     {
       title: "AutoBB - Automatic Blackboard Downloader",

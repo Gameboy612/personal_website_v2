@@ -19,7 +19,7 @@ export default function OSUDisk() {
                   {card?.title}
                 </div>
 
-                <div className="text-sm md:text-lg md:mb-4 text-gray-800">
+                <div className="text-sm mb-2 md:text-lg md:mb-4 text-gray-800">
                   {card?.content}
                 </div>
 
