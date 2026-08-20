@@ -33,7 +33,7 @@ export default function CLISelection({
               &nbsp;
               <TypingAnimation text={choice} delayMs={delay} speedMs={speed} isVisibleOverride={isVisibleOverride}/>
             </div>
-            <div className={`text-sm font-mono ml-[1em] text-gray-500 ${(hoverOption === index || option === index) ? 'opacity-100' : 'opacity-30'}`}>
+            <div className={`text-sm font-mono ml-[1em] text-gray-500 ${(hoverOption === index || option === index) ? 'opacity-100' : 'opacity-10'}`}>
               <TypingAnimation text={descriptions[index]} delayMs={delay + 100} speedMs={speed} isVisibleOverride={isVisibleOverride}/>
             </div>
           </div>
