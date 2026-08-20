@@ -27,11 +27,11 @@ export default function Projects() {
         const scrollHandler = () => {
             const boundaryElement = document.getElementById('scroll-boundary');
             const scrollDistance = boundaryElement?.getBoundingClientRect().top;
-            
-            console.log(boundaryElement)
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
             if (scrollDistance !== undefined) {
-                if (!window.ProjectsComponentData.allowScrollDown && scrollDistance - window.screen.availHeight < 0) {
-                    window.scrollTo({top: scrollDistance - window.screen.availHeight + window.scrollY, behavior: 'instant'});
+                if (!window.ProjectsComponentData.allowScrollDown && scrollDistance - viewportHeight < 0) {
+                    window.scrollTo({ top: scrollDistance - viewportHeight + window.scrollY, behavior: 'auto' });
                 }
             }
         }
@@ -106,7 +106,7 @@ export default function Projects() {
 
   
   return (
-    <section className="w-full h-[100dvh] relative mb-5">
+    <section className="w-full h-[100dvh] relative mb-50">
         <ScrollAction handleScrollEvent={handleScrollEvent} preventDefault={false}>
             <OSUAlbum scrollPosition={diskPosition} setAllowScrollDown={setAllowScrollDown} setAllowScrollUp={setAllowScrollUp} />
         </ScrollAction>
