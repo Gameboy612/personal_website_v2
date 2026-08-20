@@ -47,15 +47,21 @@ export default function OSUAlbum({
       date: "2026-12 (Upcoming)",
       content: "I am now writing CTF challenges for CUHK CTF 2026!!! I will be writing challenges for Web, Rev, OSINT, and Misc for now. Stay tuned for more updates on this!",
       href: "https://www.instagram.com/catasploit/",
-      hrefText: "CUHK CTF Team Instagram"
+      hrefText: "CUHK CTF Team Instagram",
+      images: [
+        "./assets/images/joining_catasploit.png"
+      ]
     },
     {
       title: "AI Engineer at 現代小學士",
       description: "Worked on AI Primary English Exams",
       date: "2026-8",
-      content: "I worked for a summer internship at Modern Bachelor Education, where I developed an AI system for parents to generate primary school English exams",
+      content: "I worked for a summer internship at Modern Bachelor Education on the EasyPaper project, where I developed an AI system for parents to generate primary school English exams",
       href: "https://easypaper.ai",
-      hrefText: "EasyPaper Website"
+      hrefText: "EasyPaper Website",
+      images: [
+        "./assets/images/easypaper.png"
+      ]
     },
     {
       title: "AI Chatbot & CRM",
@@ -63,7 +69,10 @@ export default function OSUAlbum({
       date: "2026-8",
       content: "I'm currently working on a custom-built CRM System for WellWiseSolutions. The system also integrates an AI Chatbot with WhatsApp Business API to answer customer inquiries, making use of FastMCP, MongoDB, FastAPI and Flask. (Yes, there are two backend frameworks, one is for the CRM API and one is for the LLM Chatbot).",
       href: "https://wellwisesolutions.health/",
-      hrefText: "WellWiseSolutions"
+      hrefText: "WellWiseSolutions",
+      images: [
+        "./assets/images/amacrm_demo.png"
+      ]
     },
     {
       title: "NuttyShell x PolyU CTF Champion",
@@ -82,7 +91,10 @@ export default function OSUAlbum({
       date: "2026-1",
       content: "This was my first project trying to monetize B2C products. It was not designed to make a lot of money, but to learn how payment systems work. I made use of Stripe to set up the payment system, and used free tier cloudflare.",
       href: "https://autobb.kalalib.com",
-      hrefText: "Product Website"
+      hrefText: "Product Website",
+      images: [
+        "./assets/images/autobb_showcase.png"
+      ]
     },
     {
       title: "CUHK CTF 2025 1st Runner Up",
@@ -102,6 +114,9 @@ export default function OSUAlbum({
       href: "https://feastar.kalalib.com",
       hrefText: "FeastAR Demo Website",
       content: "FeastAR is a mobile AR food ordering system for restaurants. We are currently developing this for a local restaurant for pilot testing.",
+      images: [
+        "./assets/images/feastar_demo.png"
+      ]
     },
     {
       title: "Jokangel Crystals - E-commerce Website",
