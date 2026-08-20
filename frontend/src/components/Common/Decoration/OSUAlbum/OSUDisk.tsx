@@ -13,7 +13,7 @@ export default function OSUDisk() {
         <div className={`absolute w-[100%] h-[100%] p-3 border-10 border-gray-400 rounded-full bg-gradient-to-b`}>
             <div className={`w-[100%] h-[100%] p-3 border-10 border-gray-400 rounded-full bg-gradient-to-b`}>
 
-              <div className={`absolute top-0 left-[50%] -translate-x-1/2 w-[100vw] h-[50vh] md:top-[50%] md:w-[44%] md:left-[3%] md:h-[80vh] md:translate-x-0 md:-translate-y-1/2 md:p-15`}>
+              <div className={`absolute top-0 left-[50%] -translate-x-1/2 w-[95vw] h-[50vh] md:top-[50%] md:w-[44%] md:left-[3%] md:h-[80vh] md:translate-x-0 md:-translate-y-1/2 md:p-15`}>
               <div className="flex flex-col justify-center h-full">
                  <div className={`text-md md:text-2xl font-bold font-mono md:mb-4 text-primary`}>
                   {card?.title}
