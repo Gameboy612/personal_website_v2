@@ -36,7 +36,7 @@ export default function OSUAlbum({
     deltaTheta = 0.6;
     scaleFactor = 0.3;
     numRenderedCards = 7;
-    scrollSpeed = 0.005;
+    scrollSpeed = 0.003;
   }
 
 
